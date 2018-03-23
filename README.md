@@ -1,5 +1,5 @@
 # 360-degrees-of-the-picture
-Batch rotates the image 360 degrees and saves it as a file
+Batch rotates the image 360 degrees and saves it as a file.
 (批次將圖片以360度旋轉並儲存為檔案)
 
 將程式跟欲處理的圖片放在同一個資料夾中
