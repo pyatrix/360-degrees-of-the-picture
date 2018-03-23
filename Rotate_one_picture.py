@@ -16,6 +16,7 @@ while angle < 30:
 	
 	# Default input 預設輸入: lena.jpg
 	i = sys.argv[1]
+	print (i)
 	img = cv2.imread('i') 
 	
 	sp = img.shape
