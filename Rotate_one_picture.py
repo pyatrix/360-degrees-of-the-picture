@@ -4,7 +4,7 @@
 # Default output file name 預設輸出檔名與格式 : lena10.png ,lena20.png,lena30.png,.....
 
 
-
+impot sys
 #import numpy as np
 import cv2
 
@@ -15,7 +15,8 @@ while angle < 30:
 	angle += 10
 	
 	# Default input 預設輸入: lena.jpg
-	img = cv2.imread('lena.jpg') 
+	i = sys.argv[1]
+	img = cv2.imread('i') 
 	
 	sp = img.shape
 	height = sp[0]
@@ -27,5 +28,13 @@ while angle < 30:
 	cv2.waitKey(30)
 	
 	# Default output file name 預設輸出檔名與格式 : lena10.png ,lena20.png,lena30.png,.....
-	outname = 'lena%d.png' %  (angle)
+	if    i[1]=='.' :
+		fo = i [0:1]
+	elif  i[2]=='.' :
+		fo = i [0:2]
+	elif  i[3]=='.' :
+		fo = i [0:3]
+	elif  i[4]=='.' :
+		fo = i [0:4]
+	outname = '%s_%s.png' % ( fo, angle )
 	cv2.imwrite(outname,dst)
