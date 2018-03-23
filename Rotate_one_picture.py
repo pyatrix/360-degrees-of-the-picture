@@ -4,7 +4,7 @@
 # Default output file name 預設輸出檔名與格式 : lena10.png ,lena20.png,lena30.png,.....
 
 
-impot sys
+import sys
 #import numpy as np
 import cv2
 
