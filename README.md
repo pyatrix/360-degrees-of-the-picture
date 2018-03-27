@@ -17,7 +17,7 @@ $ python Rotate_batch_picture.py
 
 
 旋轉單張的使用命令：
-$ python Rotate_one_picture.py lena.jpg
+$ python Rotate_Specified_picture.py lena.jpg
 
 預設輸出檔名：
 Default output file name : lena10.png ,lena20.png,lena30.png,.....
