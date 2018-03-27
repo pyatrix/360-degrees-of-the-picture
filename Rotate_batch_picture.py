@@ -28,7 +28,7 @@ for  f  in  os.listdir( NowDir ):
 		dst = cv2.warpAffine(img,M,(width,height))
 
 		cv2.imshow('name',dst)
-		cv2.waitKey(10)
+		cv2.waitKey(3)
 
 
 		if    f[1]=='.' :
