@@ -1,4 +1,4 @@
-# Batch rotate picture 360 degrees and store 批次旋轉圖片360度並儲存
+# Batch rotate picture 360 degrees and store
 
 
 import os
