@@ -1,6 +1,4 @@
 # Batch rotate picture 360 degrees and store
-
-
 import os
 import sys
 #import numpy as np
@@ -17,6 +15,8 @@ for  f  in  os.listdir( NowDir ):
 		sp=img.shape
 		height = sp[0]
 		width = sp[1]
+		ratio = 1
+		#ratio = 2.828
 
 		M = cv2.getRotationMatrix2D((width/2,height/2),angle,2.828)
 		dst = cv2.warpAffine(img,M,(width,height))
@@ -33,6 +33,8 @@ for  f  in  os.listdir( NowDir ):
 			fo = f [0:3]
 		elif  f[4]=='.' :
 			fo = f [0:4]
+		elif  f[5]=='.' :
+			fo = f [0:5]
 		outn = '%s_%s.png' % ( fo, angle )
 		print (outn)
 		cv2.imwrite(outn,dst)
