@@ -1,10 +1,12 @@
 圖片的360度旋轉。
 360-degrees-of-the-picture.
+
 批次將圖片以360度旋轉並儲存為檔案。
 Batch rotates the image 360 degrees and saves it as a file.
 
 將程式跟欲處理的圖片放在同一個資料夾中，
 Put the program in the same folder as the image you want to process.
+
 處理完的圖片輸出至同一個資料夾。
 The processed pictures are output to the same folder.
 
