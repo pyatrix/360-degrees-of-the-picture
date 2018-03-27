@@ -8,7 +8,9 @@ NowDir = os.path.split(os.path.realpath(__file__))[0]
 for  f  in  os.listdir( NowDir ):
 	angle = 0
 	while angle < 359:
+		#Each rotation angle
 		angle += 10
+		#Ignore the program itself
 		if f == "Rotate_batch_picture.py":
 			continue
 		
@@ -18,17 +20,18 @@ for  f  in  os.listdir( NowDir ):
 		sp=img.shape
 		height = sp[0]
 		width = sp[1]
+		#Image scaling
 		ratio = 1
 		#ratio = 2.828
 
-		M = cv2.getRotationMatrix2D((width/2,height/2),angle,2.828)
+		M = cv2.getRotationMatrix2D((width/2,height/2),angle,ratio)
 		dst = cv2.warpAffine(img,M,(width,height))
 
 		cv2.imshow('name',dst)
-		cv2.waitKey(30)
+		cv2.waitKey(10)
 
 
-		if      f[1]=='.' :
+		if    f[1]=='.' :
 			fo = f [0:1]
 		elif  f[2]=='.' :
 			fo = f [0:2]
