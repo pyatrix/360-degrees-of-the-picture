@@ -9,14 +9,14 @@ import sys
 import cv2
 
 angle = 0
-while angle < 30:
+while angle < 359:
 	
 	# Preset each rotation angle  : 10 degrees
 	angle += 10
 	
 	i = sys.argv[1]
 	print (i)
-	img = cv2.imread('i') 
+	img = cv2.imread(i) 
 	
 	sp = img.shape
 	height = sp[0]
@@ -25,7 +25,7 @@ while angle < 30:
 	dst = cv2.warpAffine(img,M,(width,height))
 	
 	cv2.imshow('name',dst) 
-	cv2.waitKey(23)
+	cv2.waitKey(3)
 	
 	# Default output file name  : lena10.png ,lena20.png,lena30.png,.....
 	if    i[1]=='.' :
