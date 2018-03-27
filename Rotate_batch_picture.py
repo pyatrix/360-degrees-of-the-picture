@@ -8,7 +8,10 @@ NowDir = os.path.split(os.path.realpath(__file__))[0]
 for  f  in  os.listdir( NowDir ):
 	angle = 0
 	while angle < 359:
-		angle += 1
+		angle += 10
+		if f == "Rotate_batch_picture.py":
+			continue
+		
 		img = cv2.imread(f)
 		print(f)
 
