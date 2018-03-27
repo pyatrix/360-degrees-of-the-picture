@@ -6,6 +6,8 @@ Batch rotates the image 360 degrees and saves it as a file.
 將程式跟欲處理的圖片放在同一個資料夾中，
 處理完的圖片輸出至同一個資料夾。
 
+建議圖片檔名存為數字開頭，
+本程式最後會讀取程式本身造成失敗而停止。(有待修改)
 
 需要安裝：opencv(python版)
 
