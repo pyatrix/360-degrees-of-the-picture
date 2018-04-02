@@ -11,7 +11,7 @@ for  f  in  os.listdir( NowDir ):
 		#Each rotation angle
 		angle += 10
 		#Ignore the program itself
-		if f == "Rotate_batch_picture.py":
+		if f == sys.argv[0]:
 			continue
 		
 		img = cv2.imread(f)
