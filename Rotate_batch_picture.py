@@ -8,8 +8,7 @@ NowDir = os.path.split(os.path.realpath(__file__))[0]
 for  f  in  os.listdir( NowDir ):
 	angle = 0
 	while angle < 359:
-		#Each rotation angle
-		angle += 10
+
 		#Ignore the program itself
 		if f == sys.argv[0]:
 			continue
@@ -26,10 +25,12 @@ for  f  in  os.listdir( NowDir ):
 
 		M = cv2.getRotationMatrix2D((width/2,height/2),angle,ratio)
 		dst = cv2.warpAffine(img,M,(width,height))
-
+		
+		#Each rotation angle
+		angle += 10
+		
 		cv2.imshow('name',dst)
 		cv2.waitKey(3)
-
 
 		if    f[1]=='.' :
 			fo = f [0:1]
