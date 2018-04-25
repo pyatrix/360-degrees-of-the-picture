@@ -11,9 +11,6 @@ import cv2
 angle = 0
 while angle < 359:
 	
-	# Preset each rotation angle  : 10 degrees
-	angle += 10
-	
 	i = sys.argv[1]
 	print (i)
 	img = cv2.imread(i) 
@@ -23,6 +20,9 @@ while angle < 359:
 	width  = sp[1]
 	M = cv2.getRotationMatrix2D((width/2,height/2),angle,1) 
 	dst = cv2.warpAffine(img,M,(width,height))
+	
+	# Preset each rotation angle  : 10 degrees
+	angle += 10
 	
 	cv2.imshow('name',dst) 
 	cv2.waitKey(3)
