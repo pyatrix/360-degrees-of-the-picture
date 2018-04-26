@@ -13,10 +13,7 @@ for  f  in  os.listdir( NowDir ):
 		if f == sys.argv[0]:
 			continue
 
-		#Each rotation angle
-		angle += 4
-		if angle+4 => 360:
-			continue
+
 				
 		img = cv2.imread(f)
 		print(f)
@@ -32,7 +29,10 @@ for  f  in  os.listdir( NowDir ):
 		dst = cv2.warpAffine(img,M,(width,height))
 		
 
-
+		#Each rotation angle
+		angle += 4
+		if angle >= 360:
+			continue
 				
 		cv2.imshow('name',dst)
 		cv2.waitKey(3)
