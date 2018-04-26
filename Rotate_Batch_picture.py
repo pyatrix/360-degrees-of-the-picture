@@ -32,7 +32,7 @@ for  f  in  os.listdir( NowDir ):
 		#Each rotation angle
 		angle += 4
 		if angle >= 360:
-			continue
+			sys.exit()
 				
 		cv2.imshow('name',dst)
 		cv2.waitKey(3)
