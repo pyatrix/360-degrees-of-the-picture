@@ -27,7 +27,7 @@ for  f  in  os.listdir( NowDir ):
 		dst = cv2.warpAffine(img,M,(width,height))
 		
 		#Each rotation angle
-		angle += 10
+		angle += 4
 		
 		cv2.imshow('name',dst)
 		cv2.waitKey(3)
