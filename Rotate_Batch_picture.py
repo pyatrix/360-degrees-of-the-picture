@@ -12,7 +12,12 @@ for  f  in  os.listdir( NowDir ):
 		#Ignore the program itself
 		if f == sys.argv[0]:
 			continue
-		
+
+		#Each rotation angle
+		angle += 4
+		if angle+4 => 360:
+			continue
+				
 		img = cv2.imread(f)
 		print(f)
 
@@ -21,14 +26,14 @@ for  f  in  os.listdir( NowDir ):
 		width = sp[1]
 		#Image scaling
 		ratio = 1
-		#ratio = 2.828
+		#ratio = 1.414
 
 		M = cv2.getRotationMatrix2D((width/2,height/2),angle,ratio)
 		dst = cv2.warpAffine(img,M,(width,height))
 		
-		#Each rotation angle
-		angle += 4
-		
+
+
+				
 		cv2.imshow('name',dst)
 		cv2.waitKey(3)
 
